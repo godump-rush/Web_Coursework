@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+:root(
+    --green : #87a243;
+    --light-green: #e0ffcd;
+    
+)
