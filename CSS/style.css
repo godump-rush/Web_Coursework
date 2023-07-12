@@ -1,10 +1,67 @@
+/*CSS Reset*/
 *{
     margin: 0;
     padding: o;
     box-sizing: border-box;
 }
-:root(
-    --green : #87a243;
-    --light-green: #e0ffcd;
-    
-)
+
+/*CSS Variables */
+
+:root{
+    --navbar-height: 59px;
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+
+}
+
+/* Logo and Image */
+
+#logo{
+    margin: 5px 34px;
+}
+
+#logo img{
+    height: 70px;
+    margin: 3px 6px;
+}
+
+/* Navigation List Styling */
+
+#navbar{
+    position: relative;
+}
+#navbar ul{
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li{
+    color: white;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
