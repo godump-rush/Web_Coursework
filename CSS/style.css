@@ -9,11 +9,14 @@
 
 :root{
     --navbar-height: 59px;
+    background-color:black;
 }
 /* Navigation Bar */
 #navbar{
     display: flex;
     align-items: center;
+    position: relative;
+    top: 0px;
 
 }
 
@@ -21,6 +24,8 @@
     content: "";
     background-color: black;
     position: absolute;
+    top: 0px;
+    left: 0px;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -40,9 +45,6 @@
 
 /* Navigation List Styling */
 
-#navbar{
-    position: relative;
-}
 #navbar ul{
     display: flex;
     font-family: 'Agdasima', sans-serif;
@@ -66,6 +68,7 @@
 #navbar ul li a:hover{
     color: black;
     background-color: white;
+    
 }
 
 
@@ -75,7 +78,7 @@
     display: flex;
     flex-direction: column;
     padding: 3px 200px;
-    height: 730px;
+    height: 630px;
     justify-content: center;
     align-items: center;
 }
@@ -85,7 +88,9 @@
     content: "";
     background: url(../Images/Logos/bg.jpg) no-repeat center center/cover;
     position: absolute;
-    height: 100%;
+    top: 0px;
+    left: 0px;
+    height: 100%; 
     width: 100%;
     z-index: -1;
     opacity: 0.89;
@@ -111,12 +116,11 @@
 }
 
 #services .box{
-   border: 2px solid brown;
+   border: 2px solid purple;
    padding: 34px;
    margin: 3px 6px;
    border-radius: 28px;
-   background-color: rgb(153, 95, 166);
-   color: white;
+   background-color:white;
 }
 #services .box img{
     height: 180px;
@@ -124,27 +128,30 @@
     display: block;
 
 }
-#services{
-  
+#services .box p{
+    font-family: 'Bree Serif', serif;
 }
+
+/* Client Sections */
 
 
 /* utility classes */
 .h-prime{
+    font-family: 'Bree Serif', serif;
     font-size: 3.8rem;
     padding: 12px;
-
+    color: white;
 }
 .h-sec{
-    font-size: 2.8rem;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.7rem;
     padding: 12px;
-
 }
 
 .btn{
     padding: 6px 20px;
     border: 2px solid white;
-    background-color: brown ;
+    background-color: black;
     color: white;
     margin: 17px;
     font-size: 1.5rem;
