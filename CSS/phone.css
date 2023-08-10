@@ -59,7 +59,9 @@
 
 
 /* Contact us Section  */
-
+#contact-box form{
+    width:80%;
+}
 
 /* Footer Section  */
 

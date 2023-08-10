@@ -1,3 +1,27 @@
+
+<?php
+  require('./connection.php');
+  if( isset($_POST['name'] )&& isset($_POST['email']) ){
+    echo "Hello";
+    $name = $_POST["name"];
+    echo $_POST["name"];
+      $email = $_POST["email"];
+      $message = $_POST["message"];
+      // Insert data into ContactForm table
+      $sql = "INSERT INTO ContactForm (Name, Email, Message) VALUES ('$name', '$email', '$message')";
+  
+      if ($conn->query($sql) === TRUE) {
+          echo "Form submitted successfully!";
+      } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+  }
+
+    // Close the connection
+    // $conn->close();
+
+?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,23 +99,24 @@
    <section id="contact">
       <h1 class="h-prime center">Contact Us</h1>
       <div id="contact-box">
-        <form action=""> 
+        <form action="./index.php" method="post"> 
           <div class="form-group">
             <label for="name">Name: </label>
             <input type="text" name="name" id="name" placeholder="Enter your Name">
           </div>
           <div class="form-group">
             <label for="email">Email: </label>
-            <input type="email" name="name" id="email" placeholder="Enter your Email">
+            <input type="email" name="email" id="email" placeholder="Enter your Email">
           </div>
           <div class="form-group">
             <label for="phone">Phone Number: </label>
-            <input type="phone" name="name" id="phone" placeholder="Enter your Phone">
+            <input type="phone" name="phone" id="phone" placeholder="Enter your Phone">
           </div>
           <div class="form-group">
             <label for="message">Message: </label>
             <textarea name="message" id="messege" cols="30" rows="10"></textarea>
           </div>
+          <input type="Submit">
         </form>
       </div>
    </section>
